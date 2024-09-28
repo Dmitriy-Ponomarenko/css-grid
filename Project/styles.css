@@ -65,6 +65,11 @@
   font-family: var(--common-font);
 }
 
+.longread {
+  display: grid;
+  gap: 96px;
+}
+
 .blog {
   display: grid;
   gap: 48px;
@@ -150,6 +155,13 @@
   background-color: var(--blue-light);
 }
 
+.footer-container {
+  display: grid;
+  grid-template-columns: 24px 1fr;
+  align-items: center;
+  gap: 8px;
+}
+
 @media (min-width: 768px) {
   .posts {
     gap: 24px;
@@ -178,5 +190,26 @@
 @media (min-width: 1440px) {
   .overlay {
     padding: 24px 48px;
+  }
+
+  .longread {
+    grid-template-areas:
+      "b b s"
+      "b b s"
+      "b b v"
+      "b b .";
+    gap: 60px 24px;
+  }
+
+  .blog {
+    grid-area: b;
+  }
+
+  .social {
+    grid-area: s;
+  }
+
+  .video {
+    grid-area: v;
   }
 }
